@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(229, 244, 244, 0.704);
+    color: rgba(248, 252, 252, 0.937);
+    display: grid;
+    place-content: center;
+}
+
+main {
+    background-color: rgb(0, 2, 2);
+    width: 45rem;
+    padding: 2rem;
+    border-radius: .8rem;
+
+    display: grid;
+    grid-template-areas: 
+    'cabecalho'
+    'formulario'
+    'tarefas';
+}
+
+.marginsEpaddings {
+    padding: 1rem;
+}
+
+header {
+    grid-area: cabecalho;
+}
+
+form {
+    grid-area: formulario;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.aditionalProperties {
+    height: 4rem;
+    border-radius: .8rem;
+    border-style: none;
+    border: .1rem solid rgb(169, 175, 171);
+}
+
+form > input {
+    width: 65%;
+    text-indent: 1rem;
+}
+
+form > input:focus {
+    outline: .1rem solid rgb(8, 159, 56);
+}
+
+form > .buttonAdd {
+    width: 35%;
+    background-color: rgb(8, 159, 56);
+    color: #fff;
+}
+
+.boxListTasks {
+    grid-area: tarefas;
+    background-color: rgb(0, 2, 2);
+    border-radius: .8rem;
+    height: 30rem;
+    margin: 1rem;
+    overflow-y: auto;
+}
+
+.boxListTasks > .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.content {
+    padding-left: 1rem;
+}
+
+.content > .Nbutton {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    background-color: rgb(8, 159, 56);
+    color: #fff;
+    border-style: none;
+    border: .1rem solid rgb(169, 175, 171);
+    border-radius: .6rem;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.styleContent {
+    background-color: rgba(24, 26, 27, 0.611);
+    border-radius: .6rem;
+}
